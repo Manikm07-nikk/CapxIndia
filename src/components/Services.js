@@ -1,7 +1,7 @@
 import React from 'react'
 import user1 from './images/rsz_s1-removebg-preview.png'
-import user2 from './images/rsz_s1-removebg-preview.png'
-import user3 from './images/rsz_s1-removebg-preview.png'
+import user2 from './images/ft1.jpg'
+import user3 from './images/lt1-img.jpg'
 import './Services.css'
 
 const Services = () => {
