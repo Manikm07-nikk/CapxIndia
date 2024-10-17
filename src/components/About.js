@@ -15,8 +15,19 @@ const About = () => {
                     <button className='button'>Explore More</button>
                 </div>
             </div>
+            <div className='team-cards'>
+                {[...Array(6)].map((_, index) => (
+                    <div className='card' key={index}>
+                        <div className='card-image'>
+                            <img src={`./images/team-member-${index + 1}.jpg`} alt={`Team Member ${index + 1}`} />
+                        </div>
+                        <h3>Team Member {index + 1}</h3>
+                    </div>
+                ))}
+            </div>
         </div>
     )
 }
 
 export default About
+

@@ -7,7 +7,7 @@
     z-index: 1;
     transition: .3s ease-in;
     overflow: hidden;
-    background-color: rgba(0,0,0,.9);
+    background-color: #ffdedeb0;
 }
 
 .header .navbar {
@@ -21,7 +21,7 @@
 }
 
 .header .nav-menu a {
-    color: #ffffff;
+    color: #000000;
 }
 
 .header .navbar img {

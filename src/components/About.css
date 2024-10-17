@@ -38,12 +38,54 @@
     margin-top: 1rem;
 }
 
-@media screen and (max-width:940px) {
+/* Team Cards Section */
+.team-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    justify-items: center;
+    padding: 4rem 0;
+}
+
+.card {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 320px; /* Increased width */
+    height: 320px; /* Ensuring square shape */
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-image img {
+    width: 150px; /* Increased image size */
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 940px) {
     .about .container {
         grid-template-columns: 1fr;
-    }
-
-    .about .container {
         width: 100%;
     }
 
@@ -59,13 +101,21 @@
     .about button {
         margin-bottom: 1rem;
     }
+
+    /* Change to 2 columns on smaller screens */
+    .team-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
+@media screen and (max-width: 600px) {
+    /* Change to 1 column on small screens */
+    .team-cards {
+        grid-template-columns: 1fr;
+    }
 
-
-
-
-
-
-
-
+    .card {
+        width: 90vw;
+        height: 90vw;
+    }
+}
