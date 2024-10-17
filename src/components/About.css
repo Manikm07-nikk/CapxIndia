@@ -1,5 +1,5 @@
 .about {
-    background-color: #ffffff;
+    background-color: #ffce9c;
     margin: auto;
     padding: 8rem 1rem 0 1rem;
     width: 100%;
@@ -46,6 +46,13 @@
     justify-items: center;
     padding: 4rem 0;
 }
+.team-heading {
+    text-align: center;
+    font-size: 2.5rem; 
+    margin: 2rem 0; 
+    color: #000000; 
+}
+
 
 .card {
     background: #f9f9f9;
@@ -67,11 +74,21 @@
 }
 
 .card-image img {
-    width: 150px; /* Increased image size */
+    width: 150px; 
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 1rem;
+}
+
+
+.card h4 {
+    margin-top: 1rem;
+    color: var(--secondary-color);
+}
+p.description {
+    font-size: 1.1rem;
+    margin-top: 0.8rem;
 }
 
 @keyframes fadeIn {

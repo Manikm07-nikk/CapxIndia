@@ -1,6 +1,6 @@
-import React from 'react'
-import about from './images/about-removebg-preview.png'
-import './About.css'
+import React from 'react';
+import about from './images/about-removebg-preview.png'; 
+import './About.css';
 
 const About = () => {
     return (
@@ -15,19 +15,59 @@ const About = () => {
                     <button className='button'>Explore More</button>
                 </div>
             </div>
+            <h2 className="team-heading">Our Team</h2>
             <div className='team-cards'>
-                {[...Array(6)].map((_, index) => (
-                    <div className='card' key={index}>
-                        <div className='card-image'>
-                            <img src={`./images/team-member-${index + 1}.jpg`} alt={`Team Member ${index + 1}`} />
-                        </div>
-                        <h3>Team Member {index + 1}</h3>
+                <div className='card'>
+                    <div className='card-image'>
+                        <img src='./images/user1.jpeg' alt='Nikhil Nikat' />
                     </div>
-                ))}
+                    <h3>Mr. Nikhil Nikat</h3>
+                    <h4>Director</h4>
+                    <p className="description">Mr. Nikhil Nikat is the visionary Director of Capxindia, bringing a wealth of expertise in finance to the table. He holds an MBA in Finance, a testament to his dedication to mastering the intricacies of the financial world.</p>
+                </div>
+                <div className='card'>
+                    <div className='card-image'>
+                        <img src='./images/user2.jpeg' alt='Govinda Mandalik' />
+                    </div>
+                    <h3>Mr. Govinda Mandalik</h3>
+                    <h4>Senior Manager</h4>
+                    <p className="description">With an MBA in HR, Mr. Govinda Mandalik is the driving force behind our human resources strategy at Capxindia. His expertise ensures our team remains our greatest asset.</p>
+                </div>
+                <div className='card'>
+                    <div className='card-image'>
+                        <img src='./images/team-member3.jpg' alt='Mr. Hemant Dherenge' />
+                    </div>
+                    <h3>Mr. Hemant Dherenge</h3>
+                    <h4>Research Analyst</h4>
+                    <p className="description">Mr. Hemant Dherange is a skilled Research Analyst with a passion for data and insights. His expertise plays a vital role in driving our research endeavors, ensuring we stay at the forefront of industry knowledge.</p>
+                </div>
+                <div className='card'>
+                    <div className='card-image'>
+                        <img src='./images/team-member4.jpg' alt='Mr. Ram Gopal Kashyap' />
+                    </div>
+                    <h3>Mr. Ram Gopal Kashyap</h3>
+                    <h4>Co-Founder</h4>
+                    <p className="description">Bio</p>
+                </div>
+                <div className='card'>
+                    <div className='card-image'>
+                        <img src='./images/team-member5.jpg' alt='Mr. Manik Mukhija' />
+                    </div>
+                    <h3>Mr. Manik Mukhija</h3>
+                    <h4>Software Developer</h4>
+                    <p className="description">Bio</p>
+                </div>
+                <div className='card'>
+                    <div className='card-image'>
+                        <img src='./images/team-member6.jpg' alt='Mr. Chinmay Ghayal' />
+                    </div>
+                    <h3>Mr. Chinmay Ghayal</h3>
+                    <h4>Software Developer</h4>
+                    <p className="description">Bio</p>
+                </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default About
-
+export default About;
