@@ -1,31 +1,31 @@
-import React from 'react'
-import './Footer.css'
+import React from 'react';
+import './Footer.css';
 
 const Footer = () => {
     return (
-        <div className='footer'>
-            <div className='container'>
-                <ul>
-                    <li className='nav-item'>
-                        <a href='/'>Home</a>
+        <footer className="footer">
+            <div className="container">
+                <ul className="footer-nav">
+                    <li className="nav-item">
+                        <a href="/">Home</a>
                     </li>
-                    <li className='nav-item'>
-                        <a href='#about'>About</a>
+                    <li className="nav-item">
+                        <a href="#about">About</a>
                     </li>
-                    <li className='nav-item'>
-                        <a href='#services'>Services</a>
+                    <li className="nav-item">
+                        <a href="#services">Services</a>
                     </li>
-                    <li className='nav-item'>
-                        <a href='#Contact'>Contact</a>
+                    <li className="nav-item">
+                        <a href="#contact">Contact</a>
                     </li>
                 </ul>
-                <div className='bottom'>
-                    <span className='line'></span>
-                    <p>2024 Execute, Inc. All rights reserved</p>
+                <hr />
+                <div className="bottom">
+                    <p>&copy; 2024 Execute, Inc. All rights reserved.</p>
                 </div>
             </div>
-        </div>
-    )
+        </footer>
+    );
 }
 
-export default Footer
+export default Footer;
