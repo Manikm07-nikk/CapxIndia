@@ -1,5 +1,8 @@
 import React from 'react';
 import about from './images/about-removebg-preview.png'; 
+import user1 from './images/user1.jpeg';
+import user2 from './images/user2.jpeg'
+import user3 from './images/user3.jpeg'
 import './About.css';
 
 const About = () => {
@@ -19,7 +22,7 @@ const About = () => {
             <div className='team-cards'>
                 <div className='card'>
                     <div className='card-image'>
-                        <img src='./images/user1.jpeg' alt='Nikhil Nikat' />
+                        <img src={user1} alt='Nikhil Nikat' />
                     </div>
                     <h3>Mr. Nikhil Nikat</h3>
                     <h4>Director</h4>
@@ -27,7 +30,7 @@ const About = () => {
                 </div>
                 <div className='card'>
                     <div className='card-image'>
-                        <img src='./images/user2.jpeg' alt='Govinda Mandalik' />
+                        <img src={user2} alt='Govinda Mandalik' />
                     </div>
                     <h3>Mr. Govinda Mandalik</h3>
                     <h4>Senior Manager</h4>
@@ -35,7 +38,7 @@ const About = () => {
                 </div>
                 <div className='card'>
                     <div className='card-image'>
-                        <img src='./images/team-member3.jpg' alt='Mr. Hemant Dherenge' />
+                        <img src={user3} alt='Mr. Hemant Dherenge' />
                     </div>
                     <h3>Mr. Hemant Dherenge</h3>
                     <h4>Research Analyst</h4>

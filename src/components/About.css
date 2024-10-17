@@ -74,16 +74,22 @@
 }
 
 .card-image img {
-    width: 150px; 
-    height: 150px;
-    border-radius: 50%;
+    width: 100px; 
+    height: 100px;
+    border-radius: 50 px;
     object-fit: cover;
-    margin-bottom: 1rem;
+    margin-bottom: 2.5rem;
+    margin-top: -5rem;
 }
 
+.about .card p {
+    /* color: #787878; */
+    font-size: 1.1rem;
+    margin: 1px;
+}
 
 .card h4 {
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     color: var(--secondary-color);
 }
 p.description {
