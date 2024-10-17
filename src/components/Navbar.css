@@ -52,7 +52,7 @@
 @media screen and (max-width:940px) {
     .header {
         max-width: 100%;
-        background: transparent;
+        background: rgb(255, 255, 255);
         opacity: 0.8;
     }
 
