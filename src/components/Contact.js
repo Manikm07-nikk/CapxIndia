@@ -7,8 +7,8 @@ const Contact = () => {
             <div className='container'>
                 {/* <h2>Contact</h2> */}
                 <div className='col-1'>
-                    <p>Welcome to CAPXINDIA!!!</p>
-                    <p>"Where Stocks Meet Success"</p>
+                    <h3>Welcome to CAPXINDIA!!!</h3>
+                    <h3>"Where Stocks Meet Success"</h3>
                     <p>At Capxindia, we believe in simplifying the complexities of finance and making financial success accessible to all. Join us on this financial journey, and let's create a prosperous future together.</p>
                     <button className='button'>Get your free financial analysis</button>
                 </div>
@@ -25,7 +25,7 @@ const Contact = () => {
                 <label htmlFor="message">Message:</label>
                 <textarea id="message" name="message" rows="5" required></textarea>
 
-                <button type="submit">Send Message</button>
+                <button className='submit-button ' type="submit">Send Message</button>
             </form>
             </div>
         </div>
