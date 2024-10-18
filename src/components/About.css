@@ -41,11 +41,12 @@
 /* Team Cards Section */
 .team-cards {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
     gap: 2rem;
     justify-items: center;
     padding: 4rem 0;
 }
+
 .team-heading {
     text-align: center;
     font-size: 2.5rem; 
@@ -53,13 +54,12 @@
     color: #000000; 
 }
 
-
 .card {
     background: #f9f9f9;
     border: 1px solid #ddd;
     border-radius: 8px;
-    width: 320px; /* Increased width */
-    height: 320px; /* Ensuring square shape */
+    width: 320px; 
+    height: 320px; 
     padding: 2rem;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -76,14 +76,13 @@
 .card-image img {
     width: 100px; 
     height: 100px;
-    border-radius: 50 px;
+    border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 2.5rem;
-    margin-top: -5rem;
+    margin-bottom: 1rem;
+    margin-top: -3rem;
 }
 
 .about .card p {
-    /* color: #787878; */
     font-size: 1.1rem;
     margin: 1px;
 }
@@ -92,11 +91,20 @@
     margin-top: 0.5rem;
     color: var(--secondary-color);
 }
+
 p.description {
     font-size: 1.1rem;
     margin-top: 0.8rem;
 }
 
+/* Center the last 2 cards in the same row */
+.team-cards > :nth-child(4),
+.team-cards > :nth-child(5) {
+    grid-column: span 1; /* Ensure these cards are in the same row */
+    justify-self: center;
+}
+
+/* Animations */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -124,15 +132,13 @@ p.description {
     .about button {
         margin-bottom: 1rem;
     }
-
-    /* Change to 2 columns on smaller screens */
     .team-cards {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media screen and (max-width: 600px) {
-    /* Change to 1 column on small screens */
+    
     .team-cards {
         grid-template-columns: 1fr;
     }
