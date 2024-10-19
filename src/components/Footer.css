@@ -1,8 +1,7 @@
-/* Main Footer Section */
 .footer {
     background-color: #000;
     color: #eee;
-    padding: 1.5rem 0;  /* Reduced padding */
+    padding: 1.5rem 0;
     font-family: 'Arial', sans-serif;
 }
 
@@ -12,13 +11,12 @@
     text-align: center;
 }
 
-/* Navigation List */
 .footer-nav {
     display: flex;
     justify-content: center;
     list-style: none;
     padding: 0;
-    margin-bottom: 1rem;  /* Reduced margin */
+    margin-bottom: 1rem;
 }
 
 .footer-nav .nav-item {
@@ -28,20 +26,63 @@
 .footer-nav .nav-item a {
     color: #fff;
     text-decoration: none;
-    font-size: 0.95rem;  /* Reduced font size */
+    font-size: 0.95rem;
     transition: color 0.3s ease, border-bottom 0.3s ease;
 }
 
 .footer-nav .nav-item a:hover {
-    border-bottom: 2px solid var(--secondary-color); /* Smaller border */
+    border-bottom: 2px solid var(--secondary-color);
     color: var(--secondary-color);
+}
+
+.contact-info {
+    margin: 1rem 0;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.contact-info a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: var(--secondary-color);
+}
+
+/* Social Media Icons */
+.social-media {
+    margin: 1.5rem 0;
+}
+
+.social-media .social-icon {
+    margin: 0 0.5rem;
+    color: rgb(255, 0, 0);
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-media .social-icon:hover {
+    color: whitesmoke;
 }
 
 /* Bottom Section */
 .bottom p {
-    font-size: 0.8rem;  /* Smaller font size */
+    font-size: 0.8rem;
     color: #ccc;
     margin: 0;
+}
+
+/* Divider Line */
+.footer hr {
+    border: none;
+    border-top: 1px solid #444;
+    margin: 1.5rem 0;
+    width: 80%;
+    opacity: 0.7;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Responsive Design */
@@ -53,13 +94,12 @@
     .footer-nav .nav-item {
         margin: 0.5rem 0;
     }
-}
-.footer hr {
-    border: none;  
-    border-top: 1px solid #444;  
-    margin: 1.5rem 0; 
-    width: 80%;  
-    opacity: 0.7;  
-    margin-left: auto;
-    margin-right: auto;
+
+    .contact-info {
+        font-size: 0.85rem;
+    }
+
+    .social-media .social-icon {
+        font-size: 1.2rem;
+    }
 }
