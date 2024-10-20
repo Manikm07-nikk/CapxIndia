@@ -1,38 +1,48 @@
 import React, { useState } from 'react';
 import './Contact.css';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [message, setMessage] = useState('');
-    const [isSending, setIsSending] = useState(false);
 
-    const sendEmail = (e) => {
-        e.preventDefault();
-        setIsSending(true);
+    const [isSubmitting, setIsSubmitting] = useState(false); 
+    const [stateMessage, setStateMessage] = useState(null);  
+    const [name, setName] = useState("");  
+    const [email, setEmail] = useState("");  
+    const [message, setMessage] = useState(""); 
 
-        // Using SMTPJS to send email
-        window.Email.send({
-            SecureToken: "Token",  // Replace with SMTPJS SecureToken (no need for username/password)
-            To: "To whom you have to send",  // Recipient's email
-            From: email,  // Sender's email (the user's email)
-            Subject: `New Message from ${name}`,
-            Body: `Name: ${name} <br/> Email: ${email} <br/> Message: ${message}`
-        }).then(
-            (message) => {
-                alert("Message sent successfully!");
-                console.log("Message sent successfully!")
-                setName('');
-                setEmail('');
-                setMessage('');
-                setIsSending(false);
-            }
-        ).catch(err => {
-            console.error("Failed to send message", err);
-            alert("Message failed to send.");
-            setIsSending(false);
-        });
-    };
+   const sendEmail = (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_SERVICE_ID,
+        process.env.REACT_APP_TEMPLATE_ID,
+        e.target,
+        process.env.REACT_APP_PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          setStateMessage('Message sent!');
+          setIsSubmitting(false);
+          setTimeout(() => {
+            setStateMessage(null);
+          }, 5000);
+        },
+        (error) => {
+          console.log(error);
+          setStateMessage('Something went wrong, please try again later');
+          setIsSubmitting(false);
+          setTimeout(() => {
+            setStateMessage(null);
+          }, 5000);
+        }
+      );
+
+    e.target.reset();
+    setName('');
+    setEmail('');
+    setMessage('');
+};
 
     return (
         <div className='contact' id='contact'>
@@ -43,45 +53,48 @@ const Contact = () => {
                     <p>At Capxindia, we believe in simplifying the complexities of finance and making financial success accessible to all. Join us on this financial journey, and let's create a prosperous future together.</p>
                     <button className='button'>Get your free financial analysis</button>
                 </div>
-                <form className="contact-form" onSubmit={sendEmail}>
-                    <label htmlFor="name">Name:</label>
-                    <input 
-                        type="text" 
-                        id="name" 
-                        name="name" 
-                        value={name} 
-                        onChange={(e) => setName(e.target.value)} 
-                        required 
-                    />
+<form className="contact-form" onSubmit={sendEmail}>
+    <label htmlFor="name">Name:</label>
+    <input 
+        type="text" 
+        id="name" 
+        name="from_name" // This must match the placeholder in the template
+        value={name} 
+        onChange={(e) => setName(e.target.value)} 
+        required 
+    />
 
-                    <label htmlFor="email">Email:</label>
-                    <input 
-                        type="email" 
-                        id="email" 
-                        name="email" 
-                        value={email} 
-                        onChange={(e) => setEmail(e.target.value)} 
-                        required 
-                    />
+    <label htmlFor="email">Email:</label>
+    <input 
+        type="email" 
+        id="email" 
+        name="from_email" 
+        value={email} 
+        onChange={(e) => setEmail(e.target.value)} 
+        required 
+    />
 
-                    <label htmlFor="message">Message:</label>
-                    <textarea 
-                        id="message" 
-                        name="message" 
-                        rows="5" 
-                        value={message} 
-                        onChange={(e) => setMessage(e.target.value)} 
-                        required
-                    ></textarea>
+    <label htmlFor="message">Message:</label>
+    <textarea 
+        id="message" 
+        name="message" 
+        rows="5" 
+        value={message} 
+        onChange={(e) => setMessage(e.target.value)} 
+        required
+    ></textarea>
 
-                    <button 
-                        className='submit-button' 
-                        type="submit" 
-                        disabled={isSending}
-                    >
-                        {isSending ? 'Sending...' : 'Send Message'}
-                    </button>
-                </form>
+    <button 
+        className='submit-button' 
+        type="submit" 
+        disabled={isSubmitting}
+    >
+        {isSubmitting ? 'Sending...' : 'Send Message'}
+    </button>
+    {stateMessage && <p className="state-message">{stateMessage}</p>}
+</form>
+
+
             </div>
         </div>
     );
