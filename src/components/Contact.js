@@ -18,7 +18,7 @@ const Contact = () => {
         process.env.REACT_APP_SERVICE_ID,
         process.env.REACT_APP_TEMPLATE_ID,
         e.target,
-        process.env.PUBLIC_KEY
+        "lsTWyjul4m-ayi64p"
       )
       .then(
         (result) => {
