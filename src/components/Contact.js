@@ -17,7 +17,8 @@ const Contact = () => {
       .sendForm(
         process.env.REACT_APP_SERVICE_ID,
         process.env.REACT_APP_TEMPLATE_ID,
-        process.env.REACT_APP_PUBLIC_KEY
+        e.target,
+        "lsTWyjul4m-ayi64p"
       )
       .then(
         (result) => {
