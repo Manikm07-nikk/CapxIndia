@@ -9,7 +9,7 @@ const Hero = () => {
                 <p>CAPXINDIA</p>
                 <p>We Believe</p>
                 <p>In Analysis and not forecasting</p>
-                <button href='/' className='button'>Login/SignUp</button>
+              
             </div>
         </div>
     )

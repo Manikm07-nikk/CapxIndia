@@ -21,7 +21,7 @@ const Footer = () => {
                 </ul>
                 
                 <div className="contact-info">
-                    <p>Phone: <a href="tel:+91 705-722-2020">+91 705-722-2020</a></p>
+               
                     <p>Email: <a href="mailto:contact@capxindia.in">contact@capxindia.in</a></p>
                 </div>
                 

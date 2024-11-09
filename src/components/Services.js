@@ -13,14 +13,14 @@ const Services = () => {
                 <div className='content'>
                     <div className='card'>
                         <img src={user1} alt='user1'/>
-                        <p>Allows you to simulate the performance of your trading strategy on historical data and helps you evaluate the potential profitability.</p>
-                        <p><span>Back Test</span></p>
+                        <p>At Capx India, we provide personalized financial planning to help you achieve your goals, manage investments, and secure your future. Our expert team creates customized strategies tailored to your needs.</p>
+                        <p><span>Financial Planing</span></p>
                         <p>.............</p>
                     </div>
                     <div className='card'>
                         <img src={user2} alt='user1'/>
                         <p>Tests your strategy on recent historical data that your backtest might not have included and helps you assess the robustness of your strategy in more recent market conditions.</p>
-                        <p><span>Forward Test</span></p>
+                        <p><span>Forward/Back Test</span></p>
                         <p>.............</p>
                     </div>
                     <div className='card'>
