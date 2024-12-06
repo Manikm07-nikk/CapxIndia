@@ -1,6 +1,6 @@
 import React from 'react';
 import about from './images/about-removebg-preview.png'; 
-import user1 from './images/nikhil nikat.jpg';
+// import user1 from './images/nikhil nikat.jpg';
 import user2 from './images/ram gopal.jpg'
 import user3 from './images/govinda mandalik.jpg'
 import user4 from './images/manik.jpg'
@@ -22,14 +22,14 @@ const About = () => {
             </div>
             <h2 className="team-heading">Our Team</h2>
             <div className='team-cards'>
-                <div className='card'>
+                {/* <div className='card'>
                     <div className='card-image'>
                         <img src={user1} alt='Nikhil Nikat' />
                     </div>
                     <h3>Mr. Nikhil Nikat</h3>
                     <h4>Director</h4>
                     <p className="description">Mr. Nikhil Nikat is the visionary Director of Capxindia, bringing a wealth of expertise in finance to the table. He holds an MBA in Finance, a testament to his dedication to mastering the intricacies of the financial world.</p>
-                </div>
+                </div> */}
                 <div className='card'>
                     <div className='card-image'>
                         <img src={user2} alt='Mr. Ram Gopal Kashyap' />
