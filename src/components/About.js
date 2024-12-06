@@ -1,28 +1,29 @@
-import React from 'react';
-import about from './images/about-removebg-preview.png'; 
+// import React from 'react';
+// import about from './images/about-removebg-preview.png'; 
+// import './About.css';
 // import user1 from './images/nikhil nikat.jpg';
 // import user2 from './images/ram gopal.jpg'
 // import user3 from './images/govinda mandalik.jpg'
 // import user4 from './images/manik.jpg'
 // import user5 from './images/chinmay ghayal.jpg'
-import './About.css';
+// import './About.css';
 
-const About = () => {
-    return (
-        <div className='about' id='about'>
-            <div className='container'>
-                <img src={about} alt='about' />
-                <div className='col-2'>
-                    <h2>About</h2>
-                    <span className='line'></span>
-                    <p>At Capxindia, we are dedicated to transforming your financial aspirations into reality. A visionary in the financial sector, our company is committed to providing innovative and personalized financial solutions to individuals and businesses. With a focus on excellence and integrity, we strive to exceed expectations and foster lasting relationships with our clients.</p>
-                    <p>We believe that financial success should be within reach for everyone. Our mission is to empower you with the knowledge, tools, and expertise.</p>
-                    <button className='button'>Explore More</button>
-                </div>
-            </div>
-            {/* <h2 className="team-heading">Our Team</h2>
-            <div className='team-cards'> */}
-                {/* <div className='card'>
+// const About = () => {
+//     return (
+//         <div className='about' id='about'>
+//             <div className='container'>
+//                 <img src={about} alt='about' />
+//                 <div className='col-2'>
+//                     <h2>About</h2>
+//                     <span className='line'></span>
+//                     <p>At Capxindia, we are dedicated to transforming your financial aspirations into reality. A visionary in the financial sector, our company is committed to providing innovative and personalized financial solutions to individuals and businesses. With a focus on excellence and integrity, we strive to exceed expectations and foster lasting relationships with our clients.</p>
+//                     <p>We believe that financial success should be within reach for everyone. Our mission is to empower you with the knowledge, tools, and expertise.</p>
+//                     <button className='button'>Explore More</button>
+//                 </div>
+//             </div>
+//             <h2 className="team-heading">The Complete Soltuions</h2>
+//             {/* <div className='team-cards'> */}
+                /* <div className='card'>
                     <div className='card-image'>
                         <img src={user1} alt='Nikhil Nikat' />
                     </div>
@@ -69,9 +70,63 @@ const About = () => {
                     <h3>Mr. Chinmay Ghayal</h3>
                     <h4>Software Developer</h4>
                     <p className="Description">Bio</p>
-                </div> */}
-            </div>
+                </div> */
+            // </div>
         // </div>
+//     );
+// };
+
+// export default About;
+
+
+import React from 'react';
+import about from './images/about-removebg-preview.png'; 
+import './About.css';
+import user1 from './images/TP.png'
+import user2 from './images/Algo bridge.jpg'
+import user3 from './images/broker.png'
+
+const About = () => {
+    return (
+        <div className='about' id='about'>
+            <div className='container'>
+                <img src={about} alt='about' />
+                <div className='col-2'>
+                    <h2>About</h2>
+                    <span className='line'></span>
+                    <p>At Capxindia, we are dedicated to transforming your financial aspirations into reality. A visionary in the financial sector, our company is committed to providing innovative and personalized financial solutions to individuals and businesses. With a focus on excellence and integrity, we strive to exceed expectations and foster lasting relationships with our clients.</p>
+                    <p>We believe that financial success should be within reach for everyone. Our mission is to empower you with the knowledge, tools, and expertise.</p>
+                    <button className='button'>Explore More</button>
+                </div>
+            </div>
+            <div class="team-heading">
+                    <h2>The Complete Solutions</h2>
+                </div>
+            {/* Team Cards Section */}
+            <div className='team-cards'>
+                <div className='card'>
+                    <div className='card-image'>
+                        <img src= {user1} alt='Trading Platform' />
+                    </div>
+                    <h4>Trading Platform</h4>
+                    <p className='description'>Connect and execute automated strategies effortlessly, seamlessly integrating with our platform.</p>
+                </div>
+                <div className='card'>
+                    <div className='card-image'>
+                        <img src= {user2} alt='Algo Bridge' />
+                    </div>
+                    <h4>Algo Bridge</h4>
+                    <p className='description'>Connect with any broker of your choice, enabling seamless integration for your trading strategies.</p>
+                </div>
+                <div className='card'>
+                    <div className='card-image'>
+                        <img src= {user3} alt='Broker' />
+                    </div>
+                    <h4>Broker</h4>
+                    <p className='description'>Orders are executed with your preferred broker, ensuring smooth and efficient trade management.</p>
+                </div>
+            </div>
+        </div>
     );
 };
 
