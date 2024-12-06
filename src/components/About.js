@@ -1,10 +1,10 @@
 import React from 'react';
 import about from './images/about-removebg-preview.png'; 
 // import user1 from './images/nikhil nikat.jpg';
-import user2 from './images/ram gopal.jpg'
-import user3 from './images/govinda mandalik.jpg'
-import user4 from './images/manik.jpg'
-import user5 from './images/chinmay ghayal.jpg'
+// import user2 from './images/ram gopal.jpg'
+// import user3 from './images/govinda mandalik.jpg'
+// import user4 from './images/manik.jpg'
+// import user5 from './images/chinmay ghayal.jpg'
 import './About.css';
 
 const About = () => {
@@ -20,8 +20,8 @@ const About = () => {
                     <button className='button'>Explore More</button>
                 </div>
             </div>
-            <h2 className="team-heading">Our Team</h2>
-            <div className='team-cards'>
+            {/* <h2 className="team-heading">Our Team</h2>
+            <div className='team-cards'> */}
                 {/* <div className='card'>
                     <div className='card-image'>
                         <img src={user1} alt='Nikhil Nikat' />
@@ -68,10 +68,10 @@ const About = () => {
                     </div>
                     <h3>Mr. Chinmay Ghayal</h3>
                     <h4>Software Developer</h4>
-                    <p className="description">Bio</p>
+                    <p className="Description">Bio</p>
                 </div> */}
             </div>
-        </div>
+        // </div>
     );
 };
 
